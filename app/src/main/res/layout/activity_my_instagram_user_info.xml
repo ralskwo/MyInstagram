@@ -8,7 +8,75 @@
 
     android:orientation="vertical">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradation"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="MyInstagram"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/menu_btn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:scaleType="centerCrop"
+            android:padding="8dp"
+            android:src="@drawable/menubtn"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="32dp"
+        android:id="@+id/all_list"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="전체 게시물"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="#4C73FF"/>
+
+    <TextView
+        android:layout_below="@+id/all_list"
+        android:layout_margin="32dp"
+        android:id="@+id/my_list"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="나의 게시물"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="#FF712F"/>
+
+    <TextView
+        android:layout_below="@+id/my_list"
+        android:layout_margin="32dp"
+        android:id="@+id/upload"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="업로드"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:background="#E550FF"/>
+
+    <TextView
+        android:layout_below="@+id/upload"
         android:layout_margin="32dp"
         android:id="@+id/logout"
         android:layout_width="match_parent"
@@ -26,41 +94,39 @@
         android:layout_alignParentBottom="true">
 
         <TextView
-            android:id="@+id/all_list"
+            android:id="@+id/MyInstagram"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="전체"
+            android:text="Instagram"
             android:gravity="center"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:background="#FB4141"/>
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/gradation"/>
         <TextView
-            android:id="@+id/my_list"
+            android:id="@+id/Youtube"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="본인"
+            android:text="Youtube"
             android:gravity="center"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:background="#DFFB41"/>
+
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="#FF0000"/>
         <TextView
-            android:id="@+id/upload"
+            android:id="@+id/Melon"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="업로드"
+            android:text="Melon"
             android:gravity="center"
             android:layout_weight="1"
             android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             android:background="#47FB41"/>
-        <TextView
-            android:id="@+id/user_info"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="정보"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:textSize="20dp"
-            android:background="#41D6FB"/>
 
     </LinearLayout>
 

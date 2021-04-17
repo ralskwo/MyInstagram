@@ -46,6 +46,10 @@ class MytubeActivity : AppCompatActivity() {
                 override fun onFailure(call: Call<ArrayList<Youtube>>, t: Throwable) {
                 }
             })
+
+        MyInstagram.setOnClickListener { startActivity(Intent(this,MyInstagramPostListActivity::class.java))}
+        Youtube.setOnClickListener { startActivity(Intent(this,MytubeActivity::class.java))}
+        Melon.setOnClickListener {startActivity(Intent(this,MelonActivity::class.java))}
     }
 }
 

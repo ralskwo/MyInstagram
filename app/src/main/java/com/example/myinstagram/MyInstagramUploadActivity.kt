@@ -7,9 +7,6 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_my_instagram_upload.*
-import kotlinx.android.synthetic.main.activity_my_instagram_upload.my_list
-import kotlinx.android.synthetic.main.activity_my_instagram_upload.upload
-import kotlinx.android.synthetic.main.activity_my_instagram_upload.user_info
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.MultipartBody.Part.createFormData
@@ -34,9 +31,10 @@ class MyInstagramUploadActivity : AppCompatActivity() {
             uploadPost()
         }
 
-        all_list.setOnClickListener {startActivity(Intent(this, MyInstagramPostListActivity::class.java))}
-        user_info.setOnClickListener { startActivity(Intent(this,MyInstagramUserInfo::class.java))}
-        my_list.setOnClickListener { startActivity(Intent(this, MyInstagramMyPostListActivity::class.java)) }
+        menu_btn.setOnClickListener { startActivity(Intent(this,MyInstagramUserInfo::class.java))}
+        MyInstagram.setOnClickListener { startActivity(Intent(this,MyInstagramPostListActivity::class.java))}
+        Youtube.setOnClickListener { startActivity(Intent(this,MytubeActivity::class.java))}
+        Melon.setOnClickListener {startActivity(Intent(this,MelonActivity::class.java))}
 
     }
 

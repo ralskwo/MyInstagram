@@ -30,21 +30,10 @@ class MyInstagramMyPostListActivity : AppCompatActivity() {
         glide = Glide.with(this@MyInstagramMyPostListActivity)
         createList()
 
-        user_info.setOnClickListener {
-            startActivity(
-                Intent(this, MyInstagramUserInfo::class.java)
-            )
-        }
-        all_list.setOnClickListener {
-            startActivity(
-                Intent(this, MyInstagramPostListActivity::class.java)
-            )
-        }
-        upload.setOnClickListener {
-            startActivity(
-                Intent(this, MyInstagramUploadActivity::class.java)
-            )
-        }
+        menu_btn.setOnClickListener { startActivity(Intent(this,MyInstagramUserInfo::class.java))}
+        MyInstagram.setOnClickListener { startActivity(Intent(this,MyInstagramPostListActivity::class.java))}
+        Youtube.setOnClickListener { startActivity(Intent(this,MytubeActivity::class.java))}
+        Melon.setOnClickListener {startActivity(Intent(this,MelonActivity::class.java))}
     }
 
 
